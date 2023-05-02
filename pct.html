@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MTP | Plan Creation Tool</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="name-part">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <a href="index.html">Matthew Paquette</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="title-section">
+        <div class="title-text">
+            <h1>TREES - Building a tool that helps university staff and students write step-by-step action plans.</h1>
+        </div>
+        <img class="hero-image" src="Images/hero.svg" alt="Hero image">
+    </section>
+    <section class="intro">
+        <p class="intro">TREES helps new undergrad students ease in to university life.<br>Students take an introductory
+            questionnaire and are recommended step-by-step action plans based on their responses.
+        </p>
+        <p class="sub">Prior to this project, plans could only be created by university administrators through a
+            desktop-exclusive tool. To bring more action plans to the TREES mobile app, I was asked to design a tool
+            that
+            would allow
+            for
+            users to create action plans on mobile devices.</p>
+    </section>
+    <div class="content-wrapper">
+        <section>
+            <div class="section-head">
+                <table>
+                    <tr>
+                        <td class="xvar">Goal</td>
+                        <td>Design a plan creation tool (PCT) that allows users to create-step-by-step action plans from
+                            their
+                            mobile devices</td>
+                    </tr>
+                    <tr>
+                        <td class="xvar">Process</td>
+                        <td>
+                            <ul>
+                                <li>Research, Interviews</li>
+                                <li>Wireframing</li>
+                                <li>Prototyping</li>
+                                <li>Usability Testing</li>
+                                <li>Handoff to developers</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="xvar">Team</td>
+                        <td>This was a solo UX project. I received feedback from company stakeholders (CEO and Director
+                            of Ops </td>
+                    </tr>
+                    <tr>
+                        <td class="xvar">Timeline</td>
+                        <td>About two months</td>
+                    </tr>
+                    <tr>
+                        <td class="xvar">Stakeholder Requests</td>
+                        <td>
+                            <ul>
+                                <li>Build the PCT for use by both students and faculty</li>
+                                <li>Limit constraints on plan creation – allow for as much freedom as possible in
+                                    writing
+                                    plans
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+        </section>
+
+        <section>
+            <div class="section-head">
+                <h2>Research</h2>
+                <p class="sub">Beyond considering the needs of plan creators, I felt that understanding the needs of
+                    plan
+                    consumers
+                    (university students) should inform the structure of the PCT. This way, I could design the PCT so
+                    that
+                    plan
+                    creators can more easily create plans that align with consumer needs.</p>
+            </div>
+
+            <h3>Interviews</h3>
+            <p>I talked to students and advisors from three private
+                universities in Nova Scotia, and two public universities in California.</p>
+            <p>I conducted one-on-one interviews, and led a focus group consisting of peer leaders at one of the schools
+                in
+                Nova Scotia.</p>
+            <p>Following this interviews, I conducted a literature review to ensure that my findings from these
+                interviews would scale to other univerisities.</p>
+            <h3>Findings, Insights</h3>
+            <table class="research-table">
+                <tr>
+                    <th>I found that...</th>
+                    <th>Therefore...</th>
+                </tr>
+                <tr>
+                    <td>Students find their school's resources helpful, but often don't realize that the school offers
+                        resources that may help them.<br><br>
+                        Students and staff across the board express frustration with their university's web
+                        infrastructure and find themselves inundated with irrelevant emails.</td>
+                    <td>Allow for plans concerning general wellbeing, but prioritize the creation of plans that relate
+                        to
+                        the accessing of university-specific resources.</td>
+                </tr>
+                <tr>
+                    <td>Students feel a greater sense of belonging on campus when they are connected to real people.
+                    </td>
+                    <td>Build the PCT to incentivize the creation of plans that get students in contact with real
+                        people.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Students have their own systems of organization, but these don't "play nice" with how their
+                        universities distribute information.</td>
+                    <td>Allow users to easily integrate information from plans into their existing organizational
+                        systems –
+                        Apple Maps, Google Calendar, etc.</td>
+                </tr>
+            </table>
+            <h3>Models</h3>
+            <p>I created personas:</p>
+            <img src="Images/UserPersonas.svg" alt="User Personas">
+            <p>In addition to creating traditional user journey maps, I created a plan journey map. I felt this more
+                accurately reflected the fact that creator needs are inherently informed by consumer needs.</p>
+            <img src="Images/Plan Journey Map.svg" alt="Plan Journey Map">
+        </section>
+        <section>
+            <div class="section-head">
+                <h2>Gathering Requirements</h2>
+                <p class="sub">Inspired by Sarah Prater's Object Oriented Design, I assembled a list of the data and
+                    functional needs of both creators and consumers and listed relevant input and output methods.</p>
+            </div>
+            <h3>Consumer Needs</h3>
+            <p>I referred to interview notes and browsed some university websites to determine the data objects
+                required by students.</p>
+            <div class="image-container">
+                <img src="Images/CONSUMERNEEDS1.svg" alt="Image 1">
+                <img src="Images/CONSUMERNEEDS2.svg" alt="Image 1">
+
+            </div>
+            <h3>Creator Needs</h3>
+            <p>To define creator needs, I broke down the information architecture of courses provided by Khan Academy
+                and Coursera. This helped me create three distinct functional groups:</p>
+            <p><strong>Plan info</strong></p>
+            <p>Describes the plan.</p>
+            <p><strong>Plan structure</strong></p>
+            <p>The overall structure and organization of steps.</p>
+            <p><strong>Writing steps</strong></p>
+            <p>The individual steps that make up a plan.</p>
+
+            <div class="image-container">
+                <img src="images/Creator needs info.svg" alt="Image 3">
+                <img src="Images/creator needs steps.svg" alt="Image 2">
+                <img src="images/Creator needs structure.svg" alt="Image 4">
+            </div>
+
+
+
+
+
+        </section>
+        <section>
+            <div class="section-head">
+                <h2>Initial Ideation</h2>
+                <p class="sub">I made a series of sketches, then brought these to management and the dev team to decide
+                    on a single, technically feasible version.</p>
+            </div>
+            <h3>Sketching functional views</h3>
+            <p>I sketched a few variations of each functional group, then organized these groups into user flows.
+                <img class="needs-background" src="Images/lo fi.svg" alt="Sample of Initial Ideation">
+            <h3>Making Decisions</h3>
+            <p>I discussed technical feasibility with our dev team – it was decided that they would handle the entirety
+                of rich
+                text input for authoring steps.</p>
+            <p>After bringing these to my CEO and PM and doing some hallway testing, we decided on an eventual flow to
+                build upon.
+                We further agreed that steps should be built to only allow for text
+                content due to time and budget constraints.</p>
+        </section>
+        <section>
+            <div class="section-head">
+                <h2>Refinement</h2>
+                <p class="sub">After deciding on a single flow, I looked to make a high fidelity version to pass off to
+                    the dev team.</p>
+            </div>
+            <h3>Considering Constraints</h3>
+            <p>While it had been decided to leave step creation as a text-only process, I felt that the use of
+                constraints would help plan creators make plans that work for consumers.</p>
+            <p>I made some more hi fi sketches of flows in which plan creators are constrained to one action
+                per step. I felt that constraining each step in this manner would decrease cognitive overload,
+                compared to if creators were to be given free reign over steps.</p>
+            <p>This particular iteration demonstrates a more templatized version of step creation.</p>
+            <img class="needs-background" src="images/template.svg" alt="Plan Creation: Alternate Flow">
+            <h3>Making Cards</h3>
+            <p>I personally feel this was the weakest part of this project. I had spent too much time thinking about the
+                system and had little time to make hi fi wireframes due to the deadline imposed by an upcoming
+                conference.</p>
+            <img class="needs-background" src="images/Cards.svg" alt="Hi fi plan cards">
+
+
+        </section>
+        <section>
+            <div class="section-head">
+                <h2>Final Steps</h2>
+                <p class="sub">After finalizing the look and feel, I worked with the dev team to bring the PCT into the
+                    TREES mobile app.</p>
+            </div>
+            <h3>Handoff</h3>
+            <p>I made a click-through prototype of the interface and made a more detailed wireflow to pass off
+                to the devs.</p>
+            <div class="player">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PjyuudMkm8k"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <img class="needs-background" src="Images/dev handoff.svg" alt="Image 1">
+            <p>After passing these documents off, I continued to work with the development team to fix bugs and correct
+                any misunderstandings about plan creation operations.</p>
+        </section>
+        <section>
+            <div class="section-head">
+                <h2>Impact</h2>
+                <p class="sub">The introduction of the PCT lead to a negligable increase in created plans.</p>
+            </div>
+            <p>In hindsight, I would have liked to include some sort of onboarding or segue into plan creation.</p>
+        </section>
+        <section>
+            <div class="section-head">
+                <h2>Post Development</h2>
+                <p class="sub">After the PCT had been built, the company ceased development efforts to save money. I
+                    felt that the inclusion of data objects (contact info, calendar events, etc.) would greatly increase
+                    the quality of
+                    plans, and looked for ways to add them to action plans using existing infrastructure.</p>
+            </div>
+            <h3></h3>
+            <p>While looking through the company's web API, I found that the text fields that contain step content could
+                read html tags. While this
+                functionality could not be accessed from the mobile app, I was able to add cards for that allowed users
+                to:
+            <ul>
+                <li>Open webpages in iFrames</li>
+                <li>View an address in the user's default map application.</li>
+                <li>Open the user's default email app to send emails to a specific recipient.</li>
+                <li>Call a phone number.</li>
+                <li>Add events to a user's Google Calendar</li>
+            </ul>
+            </p>
+            <p>While app users wouldn't be able to access these, I was able to make some custom plans for a university
+                admin
+                I previously interviewed.</p>
+        </section>
+        <section>
+            <div class="section-head">
+                <h2>Reflections</h2>
+                <p class="sub">The PCT was my first major design project, and was built without the guidance of a more
+                    experienced designer. While I'm glad I had the opportunity to build a new feature from scratch and
+                    bring it all the way to development, there are many things I wish I had done differently.</p>
+            </div>
+            <h3>Improving Visual Design</h3>
+            <p>My visual design was entirely too novel. As I feel that visual design is the weakest link in my UX
+                toolkit, I've been looking to Google Material and Apple's Interface Guidelines to learn more about
+                industry trends and general tips to improve the look and feel of my future designs.</p>
+            <h3>Improving Time Management</h3>
+            <p>I spent entirely too much time conducting research and nailing down the data and functional requirements
+                of users , which left little room for sketching and visual design. Since this was
+                my first time practicing Object Oriented Design, I feel more confident that I will be able to speed up
+                this process in the future.</p>
+            <h3>Usability Improvements</h3>
+            <p>While I didn't conduct formal testing, I was able to gain feedback by showing my designs to a few
+                friends.</p>
+            <p>If we had the budget to make edits to the PCT, I would have made the following changes:</p>
+            <ul>
+                <li>Make initialization one item at a time (Title, Description, Category) instead of all on a single
+                    screen.</li>
+                <li>Including more feedback — adding some indicator that a step was succesfully created.</li>
+                <li>Informing the user about the moderation process before submitting a plan.</li>
+
+
+            </ul>
+            </p>
+    </div>
+    <script href="script.js"></script>
+</body>
+
+</html>
